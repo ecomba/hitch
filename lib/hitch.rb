@@ -274,7 +274,7 @@ module Hitch
         write_hitchrc
       end
     rescue EOFError  # HighLine throws this if @input.eof?
-      break
+      # ecomba: Removed the break for compatibility with Ruby 1.9.1
     end
 
     print_current_status
